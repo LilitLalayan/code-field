@@ -28,7 +28,7 @@ function sumOne(n) {
     n = Math.floor(n / 10);
     sum += digit;
   }
-  return sum < 10 ? sum : sumNums(sum);
+  return sum < 10 ? sum : sumOne(sum);
 }
 
 sumOne(9999);
