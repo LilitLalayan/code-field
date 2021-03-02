@@ -188,8 +188,8 @@ class Student extends Person {
   }
 }
 
-let den = new Student(["history", "math", "physics"], 2, 300);
-den.passExam("history", 50);
+let Bob = new Student(["history", "math", "physics"], 2, 300);
+Bob.passExam("history", 50);
 
 class Teacher extends Person {
   constructor(program, pay) {
