@@ -210,6 +210,6 @@ class Teacher extends Person {
     this._pay = value;
   }
   toString() {
-    return `My salary is ${this.pay} dolar`;
+    return `My salary is $ ${this.pay}`;
   }
 }
