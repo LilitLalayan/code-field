@@ -194,7 +194,7 @@ Bob.passExam("history", 50);
 class Teacher extends Person {
   constructor(program, pay) {
     super();
-    this.program = WebGLProgram;
+    this.program = program;
     this.pay = pay;
   }
   get program() {
