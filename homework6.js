@@ -26,9 +26,9 @@ class Author {
     console.log(`My name is ${this.name}, and I am a writer`);
   }
 }
-class Book extends Author {
-  constructor(title, name, price, quantity) {
-    super(name);
+class Book{
+  constructor(title, author, price, quantity) {
+    this.author = author;
     this.title = title;
     this.price = price;
     this.quantity = quantity;
@@ -93,8 +93,8 @@ class Account {
   }
   transferTo(anotherAccount, amount) {
     if (amount < this.balance) {
+      anotherAccount.balance += amount;
       return (this.balance -= amount);
-      anotherAccount.balance += amount; //??????
     } else {
       alert("Amount exceeded balance.");
     }
@@ -146,8 +146,8 @@ class Person {
   }
 }
 class Student extends Person {
-  constructor(program, year, fee) {
-    super();
+  constructor(firstName, lastName, gender, age, program, year, fee) {
+    super(firstName, lastName, gender, age);
     this.program = program;
     this.year = year;
     this.fee = fee;
@@ -192,8 +192,8 @@ let Bob = new Student(["history", "math", "physics"], 2, 300);
 Bob.passExam("history", 50);
 
 class Teacher extends Person {
-  constructor(program, pay) {
-    super();
+  constructor(firstName, lastName, gender, age, program, pay) {
+    super(firstName, lastName, gender, age);
     this.program = program;
     this.pay = pay;
   }
